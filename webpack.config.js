@@ -9,14 +9,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|ts)x?$/, 
+        test: /\.(js|ts)x?$/,
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js'], 
+    extensions: [".tsx", ".ts", ".jsx", ".js"],
   },
   devServer: {
     static: {
