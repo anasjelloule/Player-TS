@@ -10,6 +10,7 @@ export const {setLoading} = MusicSlice.actions
 
 export type RootState = ReturnType<typeof store.getState>
 export const MusicState = (state: RootState) => state.Music
+export const {setCurrentsong,changeCurrentsong,setplay,handletimeaudio,setduration,handletime}= MusicSlice.actions ;
 
 
 // Sites Reducer

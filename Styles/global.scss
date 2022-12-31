@@ -205,3 +205,45 @@
     right: 0;
     left: auto;
     }
+
+    .btnplayer{
+        background: none;
+    border: none;
+    font-size: 45px;
+    }
+    .slidermusic::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 20px;
+        width: 20px;
+        // border-radius: 50%;
+        color: red;
+        background: #ff4500;
+        cursor: ew-resize;
+        box-shadow: 0 0 2px 0 #555;
+        transition: background .3s ease-in-out;
+      }
+    .spantime{
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+    .offcanvas.offcanvas-start{
+        width: 550px;
+    }
+    .offcanvas-body{
+        background:#e0dbdb;
+    }
+    .Audioitem{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        cursor: pointer;
+        &:hover{
+            background-color: #b3b2b2;
+        }
+        img {
+            margin-right: 15px;
+        }
+        transition: all 0.3s;
+    }
