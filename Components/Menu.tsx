@@ -29,7 +29,7 @@ function Menu(): JSX.Element {
                         <Link href="#" className="dropdown-item">One more separated link</Link>
                     </Dropdown> */}
 
-                    <li className="nav-item"><Link href="#" className="nav-link">Musics</Link></li>
+                    <li className="nav-item"><Link href="/#" className="nav-link">Musics</Link></li>
                     <li className="nav-item"><Link href="/About" className="nav-link">About</Link></li>
                     <li className="nav-item d-md-flex align-items-center"><Link href="#" 
                     onClick={handleClose}

@@ -7,8 +7,9 @@ import { AiFillPlayCircle, AiFillPauseCircle, AiFillStepForward, AiFillStepBackw
 
 
 
-import { RootState,  changeCurrentsong,setplay,handletime } from './../Store'
+import { RootState, changeCurrentsong, setplay, handletime } from './../Store'
 import Audioslider from '../Components/Player/audioslider';
+import AudioBtn from '../Components/Player/AudioBtn';
 
 
 
@@ -17,37 +18,10 @@ import Audioslider from '../Components/Player/audioslider';
 
 
 function index({ PlayProps }: any): JSX.Element {
-
  
-  const Music = useSelector((state: RootState) => state.Music)
-  const Played = useSelector((state: RootState) => state.Music.Played)
   const Currentsong = useSelector((state: RootState) => state.Music.Currentsong)
-  const dispatch = useDispatch()
  
-  // const [current, setcurrent] = useState<number>(0)
-  // const [duration, setduration] = useState<number>(0)
-  const playaudio = (): void => {
-    dispatch(setplay())
-  }
-
-  const handleTimex = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    // setcurrent(e.currentTarget.value as unknown as number)
-    dispatch(handletime(e.currentTarget.value as unknown as number || 0))
-    // audioplayer.current!.currentTime = e.currentTarget.value as unknown as number
-  }
-
-  // useEffect(() => {
-
-  //   setduration(audioplayer.current?.duration || 0)
-  //   if (Played)
-  //     audioplayer.current?.play()
-  //   else
-  //     audioplayer.current?.pause()
-  // }, [Played]);
-  // useEffect(() => {
-  //   dispatch(handletime(current))
  
-  // }, [current]);
 
   return (
     <>
@@ -60,23 +34,8 @@ function index({ PlayProps }: any): JSX.Element {
               <h6>{Currentsong.desc}</h6>
             </div>
             <div className='text-center'>
-              <div className='my-4 align-items-center d-flex justify-content-center my-2'>
-                <button className='btnplayer d-flex backward' disabled={Currentsong.id <= 0 ? true : false}
-                  onClick={() => dispatch(changeCurrentsong("Backward"))}
-                >
-                  <AiFillStepBackward />
-                </button>
-                <button className='btnplayer d-flex' onClick={playaudio}>
-                  {Played ? <AiFillPauseCircle /> : <AiFillPlayCircle />}
-                </button>
-                <button className='btnplayer d-flex' disabled={Currentsong.id >= Music.music.slice(-1)[0].id ? true : false}
+            <AudioBtn />
 
-                  onClick={() => dispatch(changeCurrentsong("Forward"))}
-                >
-                  <AiFillStepForward />
-                </button>
-              </div>
-               
               <Audioslider />
             </div>
 

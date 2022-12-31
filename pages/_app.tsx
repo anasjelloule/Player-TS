@@ -4,7 +4,7 @@ import React, { useState, useRef } from 'react'
 import { Provider, useDispatch, useSelector } from 'react-redux';
 
 import Layout from '../Components/Layout'
-import Player from '../Components/Player'
+import Player from '../Components/Player/Player'
 import store, { RootState, MusicObjectInterface } from './../Store'
 
 

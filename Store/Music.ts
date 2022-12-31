@@ -33,6 +33,7 @@ const initialState: AppState = {
         { id: 1, title: 'Hamza', url: "http://localhost:3000/Audio/Audio2.mp3", img: 'https://i.scdn.co/image/ab67616d0000b273f73cc2e03a580f5440dbc18a' },
         { id: 2, title: 'Ali', url: "http://localhost:3000/Audio/Audio3.mp3", img: 'https://i.scdn.co/image/ab67616d0000b273fae69d19f1150b9dbb47117c' },
         { id: 3, title: 'Fati', url: "http://localhost:3000/Audio/Audio4.mp3", img: 'https://i.scdn.co/image/ab67616d0000b2733a0e62d74fa29b457bb0bfb4' },
+        { id: 4, title: 'Video', url: "http://localhost:3000/Audio/3.Creating Our Components - 01.mp4", img: 'https://i.scdn.co/image/ab67616d0000b273f73cc2e03a580f5440dbc18a' },
     ],
     Currentsong: { id: 3, title: 'Fati', url: "http://localhost:3000/Audio/Audio4.mp3", img: 'https://i.scdn.co/image/ab67616d0000b2733a0e62d74fa29b457bb0bfb4' }
 };
